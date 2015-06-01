@@ -1,0 +1,6 @@
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\RathianPlate.dll.config
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\RathianPlate.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\RathianPlate.pdb
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.csprojResolveAssemblyReference.cache
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.pdb
