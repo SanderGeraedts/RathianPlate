@@ -4,4 +4,9 @@ C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\Rathia
 C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.csprojResolveAssemblyReference.cache
 C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.dll
 C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\obj\Debug\RathianPlate.pdb
-C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\Oracle.DataAccess.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\EntityFramework.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\EntityFramework.SqlServer.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\EntityFramework.xml
+C:\Users\Sander\Documents\MonsterHunterSite\RathianPlate\RathianPlate\bin\EntityFramework.SqlServer.xml

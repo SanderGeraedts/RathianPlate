@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Oracle.DataAccess.Client;
+//using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace RathianPlate
 {
     public class Database
     {
-        private OracleConnection conn;
+        /*private OracleConnection conn;
 
         public Database()
         {
@@ -42,7 +42,7 @@ namespace RathianPlate
                     conn.Close();
                 }
             }
-        }
+        }*/
 
 
     }
