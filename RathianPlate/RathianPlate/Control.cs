@@ -36,6 +36,12 @@ namespace RathianPlate
 
         #region public methods
 
+        //<summary>
+        // Name: CheckLogIn
+        // This method tells the Database object to check the users credentials.
+        // The database will return a filled hunter object if true or a null object
+        // if false. If true, the user will be logged in.
+        //</summary>
         public bool CheckLogIn(string username, string password)
         {
             Hunter hunter = database.CheckLogin(username, password);
@@ -50,9 +56,24 @@ namespace RathianPlate
             }
         }
 
-        public Hunter RegisterHunter(string name, string username, string password, string hr)
+        //<summary>
+        // Name: RegisterHunter
+        // This method tells the Database object to register the hunter. If everything goes
+        // right and the database object returns a (not null) hunter object, this method will
+        // return true and the user will be logged in. Else it will return false.
+        //</summary>
+        public bool RegisterHunter(string name, string username, string password, string hr)
         {
-            return null;
+            Hunter hunter = database.RegisterHunter(name, username, password, hr);
+            if (hunter != null)
+            {
+                loggedIn = hunter;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void ImportSet() //might not be added
