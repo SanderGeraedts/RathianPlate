@@ -110,7 +110,7 @@ namespace RathianPlate
         public Hunter RegisterHunter(string name, string username, string password, string hr)
         {
             //insert Hunter into Database
-            string sql = "INSERT INTO Hunter(Name, Username, Password, HR) VALUES ('@name', '@username', '@password', @hr);";
+            string sql = "INSERT INTO Hunter(Name, Username, Password, HR) VALUES (@name, @username, @password, @hr);";
             OracleCommand command = new OracleCommand(sql, conn);
 
             command.Parameters.Add(new OracleParameter("@name", name));
