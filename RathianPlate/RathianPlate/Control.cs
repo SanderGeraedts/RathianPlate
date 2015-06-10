@@ -38,7 +38,16 @@ namespace RathianPlate
 
         public bool CheckLogIn(string username, string password)
         {
-            return false;
+            Hunter hunter = database.CheckLogin(username, password);
+            if (hunter != null)
+            {
+                loggedIn = hunter;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Hunter RegisterHunter(string name, string username, string password, string hr)
