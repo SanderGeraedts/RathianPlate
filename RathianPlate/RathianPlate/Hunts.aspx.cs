@@ -7,13 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace RathianPlate
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class Hunts : System.Web.UI.Page
     {
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 

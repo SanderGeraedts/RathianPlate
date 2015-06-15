@@ -70,6 +70,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hunts.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Hunt.cs" />
     <Compile Include="Hunter.cs" />
+    <Compile Include="Hunts.aspx.cs">
+      <DependentUpon>Hunts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hunts.aspx.designer.cs">
+      <DependentUpon>Hunts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
