@@ -13,12 +13,12 @@ namespace RathianPlate {
     public partial class _default {
         
         /// <summary>
-        /// rpAlbums control.
+        /// rptHunts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpAlbums;
+        protected global::System.Web.UI.WebControls.Repeater rptHunts;
     }
 }

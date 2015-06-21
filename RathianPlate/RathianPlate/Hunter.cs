@@ -66,22 +66,22 @@ namespace RathianPlate
             this.password = password;
             this.hr = hr;
 
-            this.sets = loadSets();
-            this.hunts = loadHunts();
+            this.sets = new List<Set>();
+            this.hunts = new List<Hunt>();
         }
         #endregion
         #region private methods
-        private List<Set> loadSets()
-        {
-            return null;
-        }
-
-        private List<Hunt> loadHunts()
-        {
-            return null;
-        }
         #endregion
         #region public methods
+        public void LoadSets()
+        {
+
+        }
+
+        public void LoadHunts()
+        {
+
+        }
         public void JoinHunt(Hunt hunt)
         {
             

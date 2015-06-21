@@ -93,7 +93,8 @@ namespace RathianPlate
             this.rank = rank;
             this.type = type;
 
-            this.monsters = loadMonsters();
+            this.monsters = new List<Monster>();
+            //this.monsters = loadMonsters();
         }
         #endregion
         #region private methods
@@ -103,5 +104,18 @@ namespace RathianPlate
         }
         #endregion
 
+        public override string ToString()
+        {
+            string result = "";
+
+            for (int i = 0; i < Monsters.Count()-1; i++)
+            {
+                result +=  monsters[i].Name + ", ";
+            }
+
+            result += monsters.Last().Name;
+
+            return result;
+        }
     }
 }

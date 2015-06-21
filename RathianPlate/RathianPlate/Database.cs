@@ -160,5 +160,121 @@ namespace RathianPlate
 
             return hunter;
         }
+
+        //<summary>
+        // Name: LoadHunters
+        // Retrieves the hunters who are participating in a hunt.
+        //</summary>
+        public List<Hunter> LoadHunters(int huntId)
+        {
+            string sql = "SELECT u.Id, u.Name, u.Password, u.Skype, u.HR FROM Hunter u, Party p, Hunt h WHERE p.HunterId = u.Id AND p.HuntId = @id";
+            OracleCommand command = new OracleCommand(sql, conn);
+
+            command.Parameters.Add(new OracleParameter("@id", huntId));
+
+            List<Hunter> hunters = new List<Hunter>();
+            Hunter hunter = null;
+
+            int id = -1;
+            string name = "";
+            string username = "";
+            string password = "";
+            string hr = "";
+
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["Id"]);
+                    name = Convert.ToString(reader["Name"]);
+                    username = Convert.ToString(reader["Username"]);
+                    password = Convert.ToString(reader["Password"]);
+                    hr = Convert.ToString(reader["HR"]);
+
+                    if (id != -1)
+                    {
+                        hunter = new Hunter(id, name, username, password, hr);
+                    }
+
+                    hunters.Add(hunter);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return hunters;
+        }
+
+        //<summary>
+        // Name: LoadQuests
+        // Retrieves the quests from a single hunt.
+        //</summary>
+        public List<Quest> LoadQuests(int huntId)
+        {
+            string sql = "SELECT u.Id, u.Name, u.Password, u.Skype, u.HR FROM Hunter u, Party p, Hunt h WHERE p.HunterId = u.Id AND p.HuntId = @id";
+            OracleCommand command = new OracleCommand(sql, conn);
+
+            command.Parameters.Add(new OracleParameter("@id", huntId));
+
+            List<Quest> quests = new List<Quest>();
+            Quest quest = null;
+
+            int id = -1;
+            string name = "";
+            string username = "";
+            string password = "";
+            string hr = "";
+
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["Id"]);
+                    name = Convert.ToString(reader["Name"]);
+                    username = Convert.ToString(reader["Username"]);
+                    password = Convert.ToString(reader["Password"]);
+                    hr = Convert.ToString(reader["HR"]);
+
+                    if (id != -1)
+                    {
+                        //hunter = new Hunter(id, name, username, password, hr);
+                    }
+
+                    quests.Add(quest);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return quests;
+        }
     }
 }

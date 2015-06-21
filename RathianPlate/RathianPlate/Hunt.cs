@@ -13,7 +13,7 @@ namespace RathianPlate
         private DateTime startTime;
         private string hallId;
         private List<Hunter> hunters;
-        private List<Quest> quests;
+        private Quest quest;
         private List<Message> messages; 
         #endregion
         #region properties
@@ -40,23 +40,28 @@ namespace RathianPlate
             get { return hallId; }
             set { hallId = value; }
         }
-
+        
         public List<Hunter> Hunters
         {
             get { return hunters; }
             set { hunters = value; }
         }
 
-        public List<Quest> Quests
+        public Quest Quest
         {
-            get { return quests; }
-            set { quests = value; }
+            get { return quest; }
+            set { quest = value; }
         }
 
         public List<Message> Messages
         {
             get { return messages; }
             set { messages = value; }
+        }
+
+        public int NumberHunters
+        {
+            get { return hunters.Count(); }
         }
         #endregion
         #region constructor
@@ -68,23 +73,23 @@ namespace RathianPlate
             this.startTime = startTime;
             this.hallId = hallId;
 
-            this.hunters = loadHunters();
-            this.quests = loadQuests();
-            this.messages = loadMessages();
+            this.hunters = new List<Hunter>();
+            this.messages = new List<Message>();
         }
         #endregion
-        #region private methods
-        private List<Hunter> loadHunters()
+        #region public methods
+        public void LoadHunters()
         {
-            return null;
+            Database database = new Database();
+            this.hunters = database.LoadHunters(this.id);
         }
-        private List<Quest> loadQuests()
+        public void LoadQuests()
         {
-            return null;
+            
         }
-        private List<Message> loadMessages()
+        public void LoadMessages()
         {
-            return null;
+            
         }
         #endregion
     }

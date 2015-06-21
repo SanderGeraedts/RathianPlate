@@ -27,24 +27,27 @@
 		</div>
 		<div class="wrapper">
 			<div class="container">
-				<asp:Repeater ID="rpAlbums" runat="server">
+				<asp:Repeater ID="rptHunts" runat="server">
                 <HeaderTemplate>
                     <table border="1" width="100%">
                         <tr>
                             <th>Title</th>
-                            <th>Quest</th>
                             <th>Monsters</th>
+                            <th>Starting Time</th>
                             <th># of Hunters</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td> <a href="<%# "Hunts.aspx?query=" + Eval("id") %>"> <%# Eval("Title") %></a></td>
-                        <td><%#Eval("Quest")%></td>
-                        <td><%#Eval("Monsters")%></td>
-                        <td><%#Eval("Hunters")%></td>
+                        <td> <a href="<%# "Hunts.aspx?query=" + Eval("id") %>"> <%# Eval("Name")%></a></td>
+                        <td><%#Eval("Quest") %></td>
+                        <td><%#Eval("StartTime")%></td>
+                        <td><%#Eval("NumberHunters")%></td>
                     </tr>
                 </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
             </asp:Repeater>
 			</div>
 		</div>
