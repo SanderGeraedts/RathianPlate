@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    ///<summary>
+    /// Name: Quest
+    /// This class is required to post a hunt. 
+    ///</summary>
     public class Quest
     {
         #region fields

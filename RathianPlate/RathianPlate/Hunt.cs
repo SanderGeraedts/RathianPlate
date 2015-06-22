@@ -10,6 +10,7 @@ namespace RathianPlate
         #region fields
         private int id;
         private string name;
+        private string description;
         private DateTime startTime;
         private string hallId;
         private List<Hunter> hunters;
@@ -27,6 +28,12 @@ namespace RathianPlate
         {
             get { return name; }
             set { name = value; }
+        }
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
         }
 
         public DateTime StartTime
@@ -91,7 +98,12 @@ namespace RathianPlate
         public void LoadMessages()
         {
             Database database = new Database();
-            this.
+            this.messages = database.LoadMessages(this.id);
+        }
+
+        public void RegisterHunt()
+        {
+            
         }
         #endregion
     }

@@ -224,6 +224,23 @@ namespace RathianPlate
         }
 
         ///<summary>
+        /// Name: RegisterHunt
+        /// This method registers a hunt.
+        ///</summary>
+        public void RegisterHunt(Hunt hunt)
+        {
+            string sql = "INSERT INTO Hunt(StartTime, Description, HallId, QuestId) VALUES (@startTime, @description, @hallId, @questId);";
+            OracleCommand command = new OracleCommand(sql, conn);
+
+            command.Parameters.Add(new OracleParameter("@startTime", hunt.StartTime));
+            command.Parameters.Add(new OracleParameter("@description", hunt.Description));
+            command.Parameters.Add(new OracleParameter("@hallId", hunt.HallId));
+            command.Parameters.Add(new OracleParameter("@questId", hunt.Quest.Id));
+
+            NonQueryBase(command);
+        }
+
+        ///<summary>
         /// Name: LoadQuests
         /// Retrieves the quest for a single hunt.
         ///</summary>
@@ -283,11 +300,14 @@ namespace RathianPlate
         ///<summary>
         /// Name: LoadMonsters
         /// Retrieves the monsters for a single quest.
+        /// It also retrieves the hunter who posted the reply
         ///</summary>
         public List<Monster> LoadMonsters(int questId)
         {
             string sql = "SELECT m.Id, m.Name, m.Rank, m.SignatureMove, m.Description FROM Monster m, Quest q, MonsterPerQuest c WHERE m.Id = c.MonsterId AND c.QuestId = @id";
             OracleCommand command = new OracleCommand(sql, conn);
+            
+            command.Parameters.Add(new OracleParameter("@id", questId));
 
             int id = -1;
             string name = "";
@@ -345,7 +365,7 @@ namespace RathianPlate
         ///</summary>
         public List<Message> LoadMessages(int huntId)
         {
-            string sql = "SELECT * FROM "
+            return new List<Message>();
         }
     }
 }
