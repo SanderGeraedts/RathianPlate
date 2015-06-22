@@ -69,3 +69,54 @@
 	width: 100%;
 	min-height: 640px;
 }
+
+#formLogin {
+    width: 400px;
+	height: 200px;
+
+	border-radius: 1em;
+	border: 1px;
+	border-style: solid;
+
+	border-color: #999999;
+	background-color: #FFFFFF;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+.login form  
+{ 
+	display: table;
+	margin: auto;
+	margin-top: 70px;
+}
+
+.login p     
+{ 
+	display: table-row; 
+}
+
+.login label 
+{ 
+	display: table-cell; 
+	padding-right: 20px; 
+}
+
+.login input 
+{ 
+	display: table-cell; 
+	margin: 2px;
+	padding: 0;
+	width: 173px;
+}
+
+.login input[type="submit"]
+{
+	width: 177px;
+}

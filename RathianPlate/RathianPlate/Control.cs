@@ -5,6 +5,11 @@ using System.Web;
 
 namespace RathianPlate
 {
+    ///<summary>
+    /// Name: Control
+    /// This class controls connection between the presentation, business and database layer 
+    /// of the application.
+    ///</summary>
     public class Control
     {
         #region fields
@@ -21,6 +26,12 @@ namespace RathianPlate
             get { return loggedIn; }
             set { loggedIn = value; }
         }
+
+        public Database Database
+        {
+            get { return database; }
+            set { database = value; }
+        }
         #endregion
 
         #region constructor
@@ -36,12 +47,12 @@ namespace RathianPlate
 
         #region public methods
 
-        //<summary>
-        // Name: CheckLogIn
-        // This method tells the Database object to check the users credentials.
-        // The database will return a filled hunter object if true or a null object
-        // if false. If true, the user will be logged in.
-        //</summary>
+        ///<summary>
+        /// Name: CheckLogIn
+        /// This method tells the Database object to check the users credentials.
+        /// The database will return a filled hunter object if true or a null object
+        /// if false. If true, the user will be logged in.
+        ///</summary>
         public bool CheckLogIn(string username, string password)
         {
             Hunter hunter = database.CheckLogin(username, password);
@@ -56,12 +67,12 @@ namespace RathianPlate
             }
         }
 
-        //<summary>
-        // Name: RegisterHunter
-        // This method tells the Database object to register the hunter. If everything goes
-        // right and the database object returns a (not null) hunter object, this method will
-        // return true and the user will be logged in. Else it will return false.
-        //</summary>
+        ///<summary>
+        /// Name: RegisterHunter
+        /// This method tells the Database object to register the hunter. If everything goes
+        /// right and the database object returns a (not null) hunter object, this method will
+        /// return true and the user will be logged in. Else it will return false.
+        ///</summary>
         public bool RegisterHunter(string name, string username, string password, string hr)
         {
             Hunter hunter = database.RegisterHunter(name, username, password, hr);

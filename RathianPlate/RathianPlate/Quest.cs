@@ -94,15 +94,14 @@ namespace RathianPlate
             this.type = type;
 
             this.monsters = new List<Monster>();
-            //this.monsters = loadMonsters();
         }
         #endregion
         #region private methods
-        private List<Monster> loadMonsters()
+        public List<Monster> LoadMonsters()
         {
-            return null;
+            Database database = new Database();
+            database.LoadMonsters(this.id);
         }
-        #endregion
 
         public override string ToString()
         {
@@ -117,5 +116,6 @@ namespace RathianPlate
 
             return result;
         }
+        #endregion
     }
 }

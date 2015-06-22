@@ -83,13 +83,15 @@ namespace RathianPlate
             Database database = new Database();
             this.hunters = database.LoadHunters(this.id);
         }
-        public void LoadQuests()
+        public void LoadQuest()
         {
-            
+            Database database = new Database();
+            this.quest = database.LoadQuest(this.id);
         }
         public void LoadMessages()
         {
-            
+            Database database = new Database();
+            this.
         }
         #endregion
     }

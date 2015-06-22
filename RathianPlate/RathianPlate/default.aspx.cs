@@ -90,8 +90,8 @@ namespace RathianPlate
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.rptHunts.DataSource = hunts;
-            this.rptHunts.DataBind();
+            //this.rptHunts.DataSource = hunts;
+            //this.rptHunts.DataBind();
         }
     }
 }

@@ -29,7 +29,17 @@
 			<div class="container">
 				<form id="formLogin" runat="server">
 					<div>
-					    
+					    <p>
+				            <label for="tbUsername">Username: </label>
+				            <input id="tbUsername" name="tbUsername" type="text">
+				        </p>
+				        <p>
+				            <label for="tbPassword">Password: </label>
+				            <input id="tbPassword" name="tbPassword" type="password">
+				        </p>
+				        <p>
+				            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_OnClick"/>
+				        </p>
                     </div>
 				</form>
 			</div>
