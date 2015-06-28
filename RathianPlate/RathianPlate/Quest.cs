@@ -111,12 +111,15 @@ namespace RathianPlate
         {
             string result = "";
 
-            for (int i = 0; i < Monsters.Count()-1; i++)
+            if (Monsters.Count != 0)
             {
-                result +=  monsters[i].Name + ", ";
-            }
+                for (int i = 0; i < Monsters.Count() - 1; i++)
+                {
+                    result += monsters[i].Name + ", ";
+                }
 
-            result += monsters.Last().Name;
+                result += monsters.Last().Name;
+            }
 
             return result;
         }

@@ -13,8 +13,8 @@ namespace RathianPlate
         private string description;
         private DateTime startTime;
         private string hallId;
-        private List<Hunter> hunters;
         private Quest quest;
+        private List<Hunter> hunters;
         private List<Message> messages; 
         #endregion
         #region properties
@@ -22,12 +22,6 @@ namespace RathianPlate
         {
             get { return id; }
             set { id = value; }
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
         }
 
         public string Description
@@ -47,17 +41,17 @@ namespace RathianPlate
             get { return hallId; }
             set { hallId = value; }
         }
-        
-        public List<Hunter> Hunters
-        {
-            get { return hunters; }
-            set { hunters = value; }
-        }
 
         public Quest Quest
         {
             get { return quest; }
             set { quest = value; }
+        }
+        
+        public List<Hunter> Hunters
+        {
+            get { return hunters; }
+            set { hunters = value; }
         }
 
         public List<Message> Messages
@@ -73,10 +67,10 @@ namespace RathianPlate
         #endregion
         #region constructor
 
-        public Hunt(int id, string name, DateTime startTime, string hallId)
+        public Hunt(int id, DateTime startTime, string description, string hallId)
         {
             this.id = id;
-            this.name = name;
+            this.description = description;
             this.startTime = startTime;
             this.hallId = hallId;
 
@@ -85,21 +79,6 @@ namespace RathianPlate
         }
         #endregion
         #region public methods
-        public void LoadHunters()
-        {
-            Database database = new Database();
-            this.hunters = database.LoadHunters(this.id);
-        }
-        public void LoadQuest()
-        {
-            Database database = new Database();
-            this.quest = database.LoadQuest(this.id);
-        }
-        public void LoadMessages()
-        {
-            Database database = new Database();
-            this.messages = database.LoadMessages(this.id);
-        }
 
         public void RegisterHunt()
         {

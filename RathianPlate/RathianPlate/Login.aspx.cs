@@ -25,7 +25,7 @@ namespace RathianPlate
             }
             else
             {
-                //HTTPRequest naar login
+                control = new Control();
             }
         }
 
@@ -33,11 +33,18 @@ namespace RathianPlate
         {
             string username = tbUsername.Text;
             string password = tbPassword.Text;
-
-            control = new Control();
+            
             if (control.CheckLogIn(username, password))
             {
-
+                Session["Controller"] = this.control;
+                if (control.LastPage != null && control.LastPage != "")
+                {
+                    Response.Redirect(control.LastPage);
+                }
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
             }
             else
             {

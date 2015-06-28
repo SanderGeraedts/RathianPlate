@@ -15,13 +15,13 @@
 	<body>
 		<div class="header">
 			<div class="wrapper">
-				<a href="#"><img src="img\header.png"></img></a>
+				<a href="default.aspx"><img src="img\header.png"></img></a>
 				<ul class="menu">
-					<li><a href="#">Login</a></li>
+					<li><a href="Login.aspx">Login</a></li>
 					<li><a href="#">Armor</a></li>
 					<li><a href="#">Monsters</a></li>
-					<li><a href="#">Hunts</a></li>
-					<li><a href="#">Home</a></li>
+					<li><a href="Hunts.aspx">Hunts</a></li>
+					<li><a href="default.aspx">Home</a></li>
 				</ul>
 			</div>
 		</div>
@@ -35,14 +35,16 @@
                             <th>Monsters</th>
                             <th>Starting Time</th>
                             <th># of Hunters</th>
+                            <th>HallId</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td> <a href="<%# "Hunts.aspx?query=" + Eval("id") %>"> <%# Eval("Name")%></a></td>
+                        <td> <a href="<%# "Hunts.aspx?query=" + Eval("id") %>"> <%# Eval("Id")%></a></td>
                         <td><%#Eval("Quest") %></td>
                         <td><%#Eval("StartTime")%></td>
                         <td><%#Eval("NumberHunters")%></td>
+                        <td><%#Eval("HallId")%></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

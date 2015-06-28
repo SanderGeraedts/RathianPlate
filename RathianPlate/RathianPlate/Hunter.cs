@@ -80,7 +80,8 @@ namespace RathianPlate
 
         public void LoadHunts()
         {
-
+            Database database = new Database();
+            hunts = database.LoadHunts(id);
         }
         public void JoinHunt(Hunt hunt)
         {

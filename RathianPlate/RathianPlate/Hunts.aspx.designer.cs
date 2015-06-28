@@ -13,21 +13,12 @@ namespace RathianPlate {
     public partial class Hunts {
         
         /// <summary>
-        /// Panel1 control.
+        /// rptJoinedHunts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
-        /// btnNewHunt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewHunt;
+        protected global::System.Web.UI.WebControls.Repeater rptJoinedHunts;
     }
 }

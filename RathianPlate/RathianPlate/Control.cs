@@ -13,9 +13,12 @@ namespace RathianPlate
     public class Control
     {
         #region fields
+        private Database database;
 
         private Hunter loggedIn;
-        private Database database;
+        private string lastPage;
+
+        private List<Hunt> hunts; 
 
         #endregion
 
@@ -27,10 +30,16 @@ namespace RathianPlate
             set { loggedIn = value; }
         }
 
-        public Database Database
+        public String LastPage
         {
-            get { return database; }
-            set { database = value; }
+            get { return lastPage; }
+            set { lastPage = value; }
+        }
+
+        public List<Hunt> Hunts
+        {
+            get { return hunts; }
+            set { hunts = value; }
         }
         #endregion
 
@@ -85,6 +94,11 @@ namespace RathianPlate
             {
                 return false;
             }
+        }
+
+        public void LoadHunts()
+        {
+            this.Hunts = database.LoadHunts();
         }
 
         public void ImportSet() //might not be added
