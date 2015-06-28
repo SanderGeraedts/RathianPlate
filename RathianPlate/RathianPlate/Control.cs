@@ -37,7 +37,7 @@ namespace RathianPlate
         #region constructor
         public Control()
         {
-            
+            database = new Database();
         }
         #endregion
 

@@ -17,7 +17,7 @@ namespace RathianPlate
 
         public Database()
         {
-            conn = new OracleConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString);
+            conn = new OracleConnection("Data Source=//fhictora01.fhict.local:1521/fhictora;User ID=dbi289783;Password=ftyACFwVgk");
         }
 
         ///<summary>
@@ -59,11 +59,11 @@ namespace RathianPlate
         ///</summary>
         public Hunter CheckLogin(string username, string password)
         {
-            string sql = "SELECT * FROM Hunter WHERE Username = @username AND Password = @password";
+            string sql = "SELECT * FROM Hunter WHERE Username = :username AND Password = :password";
             OracleCommand command = new OracleCommand(sql, conn);
 
-            command.Parameters.Add(new OracleParameter("@username", username));
-            command.Parameters.Add(new OracleParameter("@password", password));
+            command.Parameters.Add(new OracleParameter("username", username));
+            command.Parameters.Add(new OracleParameter("password", password));
 
             Hunter hunter = null;
 
