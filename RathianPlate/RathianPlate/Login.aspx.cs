@@ -22,10 +22,24 @@ namespace RathianPlate
             if (Session["Controller"] != null)
             {
                 control = (Control) Session["Controller"];
+
+                if (control.LoggedIn == null)
+                {
+                    LogIn.Visible = true;
+                    LogOut.Visible = false;
+                }
+                else
+                {
+                    LogIn.Visible = false;
+                    LogOut.Visible = true;
+                    tbLoggedInUser.Text = control.LoggedIn.Name;
+                }
             }
             else
             {
-                control = new Control();
+                control = new Control(); 
+                LogIn.Visible = true;
+                LogOut.Visible = false;
             }
         }
 
@@ -51,6 +65,13 @@ namespace RathianPlate
                 errMessage.Visible = true;
             }
             
+        }
+
+        protected void btnLogOut_OnClick(object sender, EventArgs e)
+        {
+            control.LoggedIn = null;
+            Session["Controller"] = control;
+            Response.Redirect("default.aspx");
         }
     }
 }

@@ -70,8 +70,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hunter.aspx" />
     <Content Include="Hunts.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="newHunt.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -103,6 +105,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hunt.cs" />
+    <Compile Include="Hunter.aspx.cs">
+      <DependentUpon>Hunter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hunter.aspx.designer.cs">
+      <DependentUpon>Hunter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Hunter.cs" />
     <Compile Include="Hunts.aspx.cs">
       <DependentUpon>Hunts.aspx</DependentUpon>
@@ -120,6 +129,13 @@
     </Compile>
     <Compile Include="Message.cs" />
     <Compile Include="Monster.cs" />
+    <Compile Include="newHunt.aspx.cs">
+      <DependentUpon>newHunt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newHunt.aspx.designer.cs">
+      <DependentUpon>newHunt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest.cs" />
     <Compile Include="Set.cs" />

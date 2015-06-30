@@ -101,11 +101,6 @@ namespace RathianPlate
         }
         #endregion
         #region private methods
-       /* public List<Monster> LoadMonsters()
-        {
-            Database database = new Database();
-            database.LoadMonsters(this.id);
-        }*/
 
         public override string ToString()
         {

@@ -24,7 +24,7 @@ namespace RathianPlate
         public int Id { get { return id; } }
         public DateTime SentOn { get { return sentOn; } }
         public string Text { get { return text; } }
-        public Hunter Hunter { get { return hunter; } }
+        public Hunter Hunter { get { return hunter; } set { hunter = value; }}
         #endregion
 
         #region constructor

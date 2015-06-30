@@ -101,10 +101,47 @@ namespace RathianPlate
             this.Hunts = database.LoadHunts();
         }
 
+        public List<Hunt> LoadHunts(int hunterId)
+        {
+            return database.LoadHunts(hunterId);
+        }
+
+        public List<Quest> LoadQuests()
+        {
+            return database.LoadQuests();
+        }
+
+        public Hunt GetHunt(int huntId)
+        {
+            return database.LoadHunt(huntId);
+        }
+
+        public Hunt CallHunt(Hunt hunt)
+        {
+            return database.CallHunt(hunt, loggedIn);
+        }
+
+        public void JoinHunt(Hunt hunt)
+        {
+            database.JoinHunt(hunt, loggedIn);
+        }
+
+        public void LeaveHunt(Hunt hunt)
+        {
+            database.LeaveHunt(hunt, loggedIn);
+        }
+
+        public void SentMessage(Message message, Hunt hunt)
+        {
+            database.SentMessage(message, hunt.Id);
+        }
+
         public void ImportSet() //might not be added
         {
             
         }
         #endregion
+
+        
     }
 }

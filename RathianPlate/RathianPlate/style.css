@@ -3,6 +3,7 @@
 	margin: 0px;
 	padding: 0px;
 	background-color: #F7F7F7;
+    font-family: Calibri;
 }
 
 .header
@@ -119,4 +120,13 @@
 .login input[type="submit"]
 {
 	width: 177px;
+}
+
+#YesQuery, #NoQuery {
+    margin: 20px;
+}
+
+.messages {
+    margin-bottom: 10px;
+    color: red;
 }
