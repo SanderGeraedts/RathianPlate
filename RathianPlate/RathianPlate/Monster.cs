@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    /// <summary>
+    /// Name: Monster
+    /// Stores the needed data for a Monster. Although it's not fully used in the application layer, it's ready to be implemented.
+    /// </summary>
     public class Monster
     {
         #region fields

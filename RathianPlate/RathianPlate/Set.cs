@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    /// <summary>
+    /// Name: Set
+    /// Contains data for a set of armor. Not yet implemented
+    /// </summary>
     public class Set
     {
         #region fields
@@ -59,6 +63,11 @@ namespace RathianPlate
         #endregion
 
         #region private methods
+
+        /// <summary>
+        /// Name: checkValidity
+        /// Checks if there are no double armor pieces, e.g. 2 helmets.
+        /// </summary>
         private bool checkValidity(List<Armor> pieces)
         {
             int helm = 0;

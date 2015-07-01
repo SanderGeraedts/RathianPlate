@@ -7,7 +7,7 @@ namespace RathianPlate
 {
     ///<summary>
     /// Name: Message
-    /// This class contains a message for a hunt
+    /// This class contains a message for a hunt. It also contains the time it was sent on and the hunter who sent it.
     ///</summary>
     public class Message
     {

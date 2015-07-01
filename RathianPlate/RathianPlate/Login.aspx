@@ -41,6 +41,7 @@
                             <asp:TextBox ID="tbPassword" runat="server" style="margin-left: 5px;" TextMode="Password"></asp:TextBox>
                         </p>
                         <asp:Button ID="btnLogin" runat="server" Text="Log in" OnClick="btnLogin_OnClick" style="margin-left: 5px;"/>
+                        <a href="Register.aspx">... or create a new account</a>
                     </div>
                     <div id="LogOut" runat="server">
                         <asp:Label ID="lblLoggedInUser" runat="server" Text="You are already logged in as: "></asp:Label><asp:TextBox ID="tbLoggedInUser" runat="server" ReadOnly="True"></asp:TextBox><br />

@@ -7,7 +7,7 @@ namespace RathianPlate
 {
     ///<summary>
     /// Name: Quest
-    /// This class is required to post a hunt. 
+    /// This class is required to post a hunt. It contains all the info needed for a Quest. However, most of the elements of Quest still need to be implemented in the presentation layer
     ///</summary>
     public class Quest
     {

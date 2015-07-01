@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    /// <summary>
+    /// Name: Armor
+    /// This class is used to store data from an armor piece. Has yet be be implemented the the application
+    /// </summary>
     public class Armor
     {
         #region fields

@@ -71,7 +71,7 @@
 	min-height: 640px;
 }
 
-#formLogin {
+#formLogin, #formRegister {
     width: 400px;
 	height: 200px;
 
@@ -91,25 +91,25 @@
 	margin: auto;
 }
 
-.login form  
+.login form, #RegisterHunter form  
 { 
 	display: table;
 	margin: auto;
 	margin-top: 70px;
 }
 
-.login p     
+.login p, #formRegister p     
 { 
 	display: table-row; 
 }
 
-.login label 
+.login label, #formRegister label
 { 
 	display: table-cell; 
 	padding-right: 20px; 
 }
 
-.login input 
+.login input, #formRegister input
 { 
 	display: table-cell; 
 	margin: 2px;

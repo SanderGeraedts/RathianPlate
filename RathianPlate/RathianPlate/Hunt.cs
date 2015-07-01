@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    /// <summary>
+    /// Name: Hunt
+    /// This class is used to store the data needed to show a hunt. 
+    /// </summary>
     public class Hunt
     {
         #region fields

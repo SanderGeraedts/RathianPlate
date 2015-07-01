@@ -5,6 +5,10 @@ using System.Web;
 
 namespace RathianPlate
 {
+    /// <summary>
+    /// Name: Hunter
+    /// This is the main user class. It is used to identify users and store required data
+    /// </summary>
     public class Hunter
     {
         #region fields
@@ -73,30 +77,6 @@ namespace RathianPlate
         #region private methods
         #endregion
         #region public methods
-        public void LoadSets()
-        {
-
-        }
-
-        public void LoadHunts()
-        {
-            Database database = new Database();
-            hunts = database.LoadHunts(id);
-        }
-        public void JoinHunt(Hunt hunt)
-        {
-            
-        }
-
-        public void CallHunt(Hunt hunt)
-        {
-            
-        }
-
-        public void PlaceMessage(Message message, Hunt hunt)
-        {
-            
-        }
         #endregion
     }
 }
